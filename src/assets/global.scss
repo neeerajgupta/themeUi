@@ -1,0 +1,194 @@
+.leftlayout {
+    box-shadow: 9px 3px 5px #efe4e4;
+    z-index: 98;
+
+    .sidebarmenu {
+        box-shadow: 0 .125rem .5rem 0 rgba(47, 43, 61, .12);
+        height: 92vh;
+        touch-action: none;
+        user-select: none;
+        -webkit-user-drag: none;
+        -webkit-tap-highlight-color: rgb(199 41 41 / 0%);
+        background: #ffff;
+        // position: fixed;
+        // z-index: 99999;
+
+
+
+        &.expend {
+            width: 16.25rem;
+            transition: width 1s;
+
+            .imglogo1 {
+                width: 150px;
+                transition: width 1s;
+            }
+
+
+        }
+
+        &.close {
+            width: 5rem;
+            transition: width 1s;
+
+            .imglogo {}
+
+            .imglogo1 {
+                // display: none;
+                width: 0px;
+                transition: width 1s;
+            }
+        }
+
+
+        .app-brand {
+            display: flex;
+            justify-content: space-around;
+            padding: 8px 16px;
+            align-items: center;
+        }
+
+        .sidepanelmenu {}
+    }
+
+}
+
+.rightlayout {
+    padding-left: 1.25rem;
+    background: #f6f5f8;
+    height: 92vh;
+    width: 100%;
+    position: relative;
+    overflow: auto;
+
+
+    .topbar {
+        box-shadow: 2px -21px 32px #e3e3e3;
+        width: 76%;
+        margin-top: 24px;
+        position: fixed;
+        z-index: 99;
+    }
+
+    .routedcomponents {
+        margin-top: 100px;
+
+        .card {
+            .p-card {
+                margin-right: 16px;
+                .p-card-body{
+                    padding: 0px 16px;
+                  .information{
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: #716f76;
+                  }
+                  label{
+                    font-size: 14px;
+                    margin-left: 8px;
+                    color: #acaab1;
+                  }
+                }
+            }
+
+            .low {
+
+                .p-card .p-card-body {
+                    border-bottom: 1px solid lightgreen;
+
+                    .p-card-content {
+                        .cardicons {
+                            height: 40px;
+                            width: 40px;
+                            border-radius: 4px;
+                            display: flex;
+                            justify-content: center;
+                            align-items:center;
+                            background: lightgreen;
+                        }
+                    }
+                    &:hover{
+                        border-bottom: 6px solid lightgreen;
+                        transition: 1s;
+                    }
+                }
+
+            }
+
+            .medium {
+
+                .p-card .p-card-body {
+                    border-bottom: 1px solid #e3e3a8;
+
+                    .p-card-content {
+                        .cardicons {
+                            height: 40px;
+                            width: 40px;
+                            border-radius: 4px;
+                            display: flex;
+                            justify-content: center;
+                            align-items:center;
+                            background: #e3e3a8;
+                        }
+                    }
+                    &:hover{
+                        border-bottom: 6px solid #e3e3a8;
+                        transition: 1s;
+                    }
+                }
+            }
+
+            .normal {
+
+                .p-card .p-card-body {
+                    border-bottom: 1px solid lightcoral;
+
+                    .p-card-content {
+                        .cardicons {
+                            height: 40px;
+                            width: 40px;
+                            border-radius: 4px;
+                            display: flex;
+                            justify-content: center;
+                            align-items:center;
+                            background: lightcoral;
+                        }
+                    }
+                    &:hover{
+                        border-bottom: 6px solid lightcoral;
+                        transition: 1s;
+                    }
+                }
+               
+            }
+
+            .full {
+                .p-card .p-card-body {
+                    border-bottom: 1px solid lightblue;
+
+                    .p-card-content {
+                        .cardicons {
+                            height: 40px;
+                            width: 40px;
+                            border-radius: 4px;
+                            display: flex;
+                            justify-content: center;
+                            align-items:center;
+                            background: lightblue;
+                        }
+                    }
+                    &:hover{
+                        border-bottom: 6px solid lightblue;
+                        transition: 1s;
+                    }
+                }
+                
+            }
+
+
+        }
+
+
+
+    }
+}
