@@ -1,3 +1,7 @@
+.p-grid{
+    margin: 0px;
+}
+
 .leftlayout {
     box-shadow: 9px 3px 5px #efe4e4;
     z-index: 98;
@@ -63,21 +67,26 @@
 
 
     .topbar {
-        box-shadow: 2px -21px 32px #e3e3e3;
-        width: 76%;
+        box-shadow: 0px -16px 20px #e3e3e3;
         margin-top: 24px;
-        position: fixed;
+        position: sticky;
+        top: 14px;
         z-index: 99;
+        margin: 0px 8px;
+        background: #f6f5f8;
+        border-radius: 10px;
     }
 
     .routedcomponents {
-        margin-top: 100px;
+        margin-top: 16px;
 
         .card {
             .p-card {
                 margin-right: 16px;
                 .p-card-body{
                     padding: 0px 16px;
+                    transition: all .2s ease-in-out;
+                    box-shadow: 0 .1875rem .75rem 0 rgba(47, 43, 61, .14);
                   .information{
                     font-size: 16px;
                     font-weight: 500;
@@ -186,6 +195,18 @@
             }
 
 
+        }
+
+        .overviewdiv{
+            margin-bottom: 16px;
+            .p-card{
+                padding: 16px;
+                .p-card-header{
+                    img{
+                        width: auto;
+                    }
+                }
+            }
         }
 
 
