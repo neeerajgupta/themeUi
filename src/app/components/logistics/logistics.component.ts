@@ -58,7 +58,7 @@ export class LogisticsComponent implements OnInit {
   constructor(private service: AllServicesService) { }
 
   ngOnInit(): void {
-    this.customerData()
+    // this.customerData()
 
     this.items = [{
       label: '42',
@@ -101,25 +101,25 @@ export class LogisticsComponent implements OnInit {
     }
   }
 
-  customerData() {
-    this.service.getTableData().subscribe(resp => {
-      this.customers = resp;
+  // customerData() {
+  //   this.service.getTableData().subscribe(resp => {
+  //     this.customers = resp;
 
-      if (this.customers.data && Array.isArray(this.customers.data)) {
-        this.customers.data.forEach((customer: { end_city: any; start_city: any; warnings: any; progress: any; }) => {
-          this.customer = customer;
-          // console.log("customer",this.customer);
-          // console.log("customer",this.customer.id)
+  //     if (this.customers.data && Array.isArray(this.customers.data)) {
+  //       this.customers.data.forEach((customer: { end_city: any; start_city: any; warnings: any; progress: any; }) => {
+  //         this.customer = customer;
+  //         // console.log("customer",this.customer);
+  //         // console.log("customer",this.customer.id)
 
-        });
-      } else {
-        console.log("No customer data found or data is not an array.");
-      }
+  //       });
+  //     } else {
+  //       console.log("No customer data found or data is not an array.");
+  //     }
 
-    }, error => {
-      console.error('Error fetching data:', error);
-    });
-  }
+  //   }, error => {
+  //     console.error('Error fetching data:', error);
+  //   });
+  // }
 
 
 
