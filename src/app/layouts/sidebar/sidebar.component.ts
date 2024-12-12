@@ -21,50 +21,60 @@ import { Router } from '@angular/router';
 export class SidebarComponent implements OnInit {
   items: any;
 
+  constructor(private route:Router){}
   ngOnInit() {
     this.items = [
       {
-        label: 'Files',
-        icon: 'pi pi-file',
-        route:'/logistic',
+        label: 'Home',
+        icon: 'pi pi-home',
+        command: () => {
+          this.route.navigate(['/']);
+        }
+      },
+      {
+        label: 'Dashbord',
+        icon: 'pi pi-star',
+        command: () => {
+          this.route.navigate(['/logistic']);
+        }
+      },
+      {
+        label: 'Projects',
+        icon: 'pi pi-search',
         items: [
           {
-            label: 'Documents',
-            icon: 'pi pi-file',
-            items: [
-              {
-                label: 'Invoices',
-                icon: 'pi pi-file-pdf',
-                items: [
-                  {
-                    label: 'Pending',
-                    icon: 'pi pi-stop'
-                  },
-                  {
-                    label: 'Paid',
-                    icon: 'pi pi-check-circle'
-                  }
-                ]
-              },
-              {
-                label: 'Clients',
-                icon: 'pi pi-users'
-              }
-            ]
+            label: 'Components',
+            icon: 'pi pi-bolt'
           },
           {
-            label: 'Images',
-            icon: 'pi pi-image',
+            label: 'Blocks',
+            icon: 'pi pi-server'
+          },
+          {
+            label: 'UI Kit',
+            icon: 'pi pi-pencil'
+          },
+          {
+            label: 'Templates',
+            icon: 'pi pi-palette',
             items: [
               {
-                label: 'Logos',
-                icon: 'pi pi-image'
+                label: 'Apollo',
+                icon: 'pi pi-palette'
+              },
+              {
+                label: 'Ultima',
+                icon: 'pi pi-palette'
               }
             ]
           }
         ]
+      },
+      {
+        label: 'Contact',
+        icon: 'pi pi-envelope'
       }
-    ];
+    ]
   }
 
   expend: boolean = true;

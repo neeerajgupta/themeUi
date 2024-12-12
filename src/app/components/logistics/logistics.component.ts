@@ -37,7 +37,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   ],
   templateUrl: './logistics.component.html',
   styleUrl: './logistics.component.scss',
-  providers: [AllServicesService, ProgressBar, Table],
+  providers: [AllServicesService, ProgressBar, TableModule],
 
 })
 

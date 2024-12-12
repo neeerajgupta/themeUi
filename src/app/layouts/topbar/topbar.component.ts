@@ -19,10 +19,12 @@ export class TopbarComponent implements OnInit {
       {
         label: 'Home',
         icon: 'pi pi-home',
-        route:'/logistic'
+        command: () => {
+          this.router.navigate(['/']);
+        }
       },
       {
-        label: 'Features',
+        label: 'Dashbord',
         icon: 'pi pi-star',
         command: () => {
           this.router.navigate(['/logistic']);
