@@ -12,6 +12,7 @@ import { ButtonModule } from 'primeng/button';
 import { AllServicesService } from '../../services/all-services.service';
 import {HttpClientModule } from '@angular/common/http';
 import { AvatarModule } from 'primeng/avatar';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-logistics',
   standalone: true,
@@ -44,7 +45,7 @@ export class LogisticsComponent implements OnInit {
   loading: boolean = true;
   statuses!: any[];
 
-  constructor(private service: AllServicesService) { }
+  constructor(private service: AllServicesService,private rout:Router) { }
 
   ngOnInit(): void {
     this.customerData()
@@ -116,6 +117,10 @@ export class LogisticsComponent implements OnInit {
       default:
         return 'secondary'; 
     }
+  }
+
+  onRowClick(event:any){
+    this.rout.navigate(['/tabledata'], { state: { rowData: event } });
   }
 
 

@@ -71,8 +71,8 @@ export class SidebarComponent implements OnInit {
         ]
       },
       {
-        label: 'Contact',
-        icon: 'pi pi-envelope',
+        label: 'Vehicles Data',
+        icon: 'pi pi-sitemap',
         command: () => {
           this.route.navigate(['/tabledata']);
         }

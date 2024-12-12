@@ -1,39 +1,9 @@
 
-<div class="datatable">
-    <p-table [value]="customer" dataKey="id" [rows]="10" [rowsPerPageOptions]="[10, 25, 50]" [paginator]="true">
-        <ng-template pTemplate="caption">
-            <div class="p-d-flex ">
-                <h3 class="p-d-flex p-ai-center p-m-0"> <img src="../../../assets/images/logo1.png" alt=""
-                        height="24px" width="24px" class="p-mr-2">On route vehicles</h3>
 
-            </div>
-        </ng-template>
-
-        <ng-template pTemplate="header">
-            <tr>
-                <th>Id</th>
-                <th>vehicles</th>
-                <th>Location ID</th>
-                <th>Start_city</th>
-                <th>End_city</th>
-                <th>Status</th>
-                <th>Progress</th>
-                <th>Country</th>
-            </tr>
-        </ng-template>
-        <ng-template pTemplate="body" let-customer>
-            <tr>
-                <td>{{customer.id}}</td>
-                <td><p-avatar [icon]="customer.vehicles.icon" shape="circle" class="p-mr-2">
-                    </p-avatar><strong>{{customer.vehicles.type }}</strong></td>
-                <td>{{customer.location}}</td>
-                <td>{{customer.start_city}}</td>
-                <td>{{customer.end_city}}</td>
-                <td> <p-tag [value]="customer.status" [severity]="getSeverity(customer.status)" /> </td>
-                <td> <p-progressBar [value]="customer.progress" [showValue]="true"></p-progressBar></td>
-                <td>{{customer.start_country}}</td>
-            </tr>
-        </ng-template>
-    </p-table>
-
-   </div>
+<div >
+    <h2>Customer Details</h2>
+    <p><strong>ID:</strong>{{rowData.id}} </p>
+    <p><strong>Name:</strong> </p>
+    <p><strong>Email:</strong></p>
+    <!-- Add more fields as needed -->
+  </div>

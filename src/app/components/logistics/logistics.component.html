@@ -90,7 +90,7 @@
 
 
 <div class="datatable">
-    <p-table [value]="customer" dataKey="id" [rows]="10" [rowsPerPageOptions]="[10, 25, 50]" [paginator]="true">
+    <p-table [value]="customer" dataKey="id" [rows]="10" [rowsPerPageOptions]="[10, 25, 50]" [paginator]="true" >
         <ng-template pTemplate="caption">
             <div class="p-d-flex ">
                 <h3 class="p-d-flex p-ai-center p-m-0"> <img src="../../../assets/images/logo1.png" alt=""
@@ -114,8 +114,8 @@
         <ng-template pTemplate="body" let-customer>
             <tr>
                 <td>{{customer.id}}</td>
-                <td><p-avatar [icon]="customer.vehicles.icon" shape="circle" class="p-mr-2">
-                    </p-avatar><strong>{{customer.vehicles.type }}</strong></td>
+                <td  ><p-avatar [icon]="customer.vehicles.icon" shape="circle" class="p-mr-2">
+                    </p-avatar><strong  (click)="onRowClick(customer)">{{customer.vehicles.type }}</strong></td>
                 <td>{{customer.location}}</td>
                 <td>{{customer.start_city}}</td>
                 <td>{{customer.end_city}}</td>

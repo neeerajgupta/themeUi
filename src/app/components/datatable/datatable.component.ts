@@ -6,57 +6,30 @@ import { HttpClientModule } from '@angular/common/http';
 import { TagModule } from 'primeng/tag';
 import { ProgressBar, ProgressBarModule } from 'primeng/progressbar';
 import { Avatar, AvatarModule } from 'primeng/avatar';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-datatable',
   standalone: true,
-  imports: [TableModule, HttpClientModule, TagModule,ProgressBarModule,AvatarModule],
+  imports: [ HttpClientModule, AvatarModule],
   templateUrl: './datatable.component.html',
   styleUrls: ['./datatable.component.scss'],
   providers: [AllServicesService]
 })
 export class DatatableComponent {
-  customers: any;
-  customer: any[] = [];
-  loading: boolean = true;
-  statuses!: any[];
+  rowData: any;
 
-  constructor(private service: AllServicesService) { }
+  constructor(private route: ActivatedRoute,private customerService:AllServicesService) {}
 
-  ngOnInit() {
-    this.customerData();
+  ngOnInit(): void {
+    this.rowData = history.state.rowData; // Access the passed data
+    console.log('Received Row Data:', this.rowData);
    
   }
 
+ 
 
 
-  customerData() {
-    this.service.getData().subscribe(resp => {
-      this.customers = resp;
-      if (this.customers.data && Array.isArray(this.customers.data)) {
-        this.customer = this.customers.data;
-        console.log("customers", this.customer);
-      } else {
-        console.log("No customer data found or data is not an array.");
-      }
-    }, error => {
-      console.error('Error fetching data:', error);
-    });
-  }
 
-  getSeverity(status: string) {
-    switch (status.toLowerCase()) {
-      case 'danger':
-        return 'danger';
-      case 'success':
-        return 'success';
-      case 'info':
-        return 'info';
-      case 'warning':
-        return 'warning';
-      default:
-        return 'secondary'; 
-    }
-  }
   
 
 }
