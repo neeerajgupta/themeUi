@@ -9,7 +9,13 @@ export class AllServicesService {
 
   constructor(public http:HttpClient) { }
 
-  getTableData(){
+  getData(){
     return this.http.get<any>('../../../assets/json/data.json')
+  }
+   getTableData(){
+    return this.http.get<any>('../../../assets/json/data.json').toPromise()
+    .then(res => <Data[]>res.data)
+    .then(data => { return data; });
+    
   }
 }

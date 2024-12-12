@@ -72,7 +72,10 @@ export class SidebarComponent implements OnInit {
       },
       {
         label: 'Contact',
-        icon: 'pi pi-envelope'
+        icon: 'pi pi-envelope',
+        command: () => {
+          this.route.navigate(['/tabledata']);
+        }
       }
     ]
   }

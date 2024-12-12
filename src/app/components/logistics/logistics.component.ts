@@ -1,28 +1,22 @@
-import { Component, NgModule, OnInit } from '@angular/core';
-import { Card, CardModule } from 'primeng/card';
-import { PanelMenu, PanelMenuModule } from 'primeng/panelmenu';
+import { Component,  OnInit } from '@angular/core';
+import {  CardModule } from 'primeng/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
-
-
-import { Table } from 'primeng/table';
 import { TagModule } from 'primeng/tag';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { InputTextModule } from 'primeng/inputtext';
 import { TableModule } from 'primeng/table';
-import { ProgressBar, ProgressBarModule } from 'primeng/progressbar';
+import { ProgressBarModule } from 'primeng/progressbar';
 import { ButtonModule } from 'primeng/button';
 import { AllServicesService } from '../../services/all-services.service';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { BrowserModule } from '@angular/platform-browser';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import {HttpClientModule } from '@angular/common/http';
+import { AvatarModule } from 'primeng/avatar';
 @Component({
   selector: 'app-logistics',
   standalone: true,
-  imports: [CardModule,
+  imports: [
+    CardModule,
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
@@ -33,32 +27,27 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     TableModule,
     InputTextModule, ProgressBarModule,
     HttpClientModule,
+    AvatarModule
 
   ],
   templateUrl: './logistics.component.html',
   styleUrl: './logistics.component.scss',
-  providers: [AllServicesService, ProgressBar, TableModule],
+  providers: [AllServicesService,],
 
 })
 
 
 export class LogisticsComponent implements OnInit {
   items: any
-  customers: any
-  customer: any
-
-
-
-
-
-
-
-
+  customers: any;
+  customer: any[] = [];
+  loading: boolean = true;
+  statuses!: any[];
 
   constructor(private service: AllServicesService) { }
 
   ngOnInit(): void {
-    // this.customerData()
+    this.customerData()
 
     this.items = [{
       label: '42',
@@ -101,25 +90,33 @@ export class LogisticsComponent implements OnInit {
     }
   }
 
-  // customerData() {
-  //   this.service.getTableData().subscribe(resp => {
-  //     this.customers = resp;
-
-  //     if (this.customers.data && Array.isArray(this.customers.data)) {
-  //       this.customers.data.forEach((customer: { end_city: any; start_city: any; warnings: any; progress: any; }) => {
-  //         this.customer = customer;
-  //         // console.log("customer",this.customer);
-  //         // console.log("customer",this.customer.id)
-
-  //       });
-  //     } else {
-  //       console.log("No customer data found or data is not an array.");
-  //     }
-
-  //   }, error => {
-  //     console.error('Error fetching data:', error);
-  //   });
-  // }
+  customerData() {
+    this.service.getData().subscribe(resp => {
+      this.customers = resp;
+      if (this.customers.data && Array.isArray(this.customers.data)) {
+        this.customer = this.customers.data;
+        console.log("customers", this.customer);
+      } else {
+        console.log("No customer data found or data is not an array.");
+      }
+    }, error => {
+      console.error('Error fetching data:', error);
+    });
+  }
+  getSeverity(status: string) {
+    switch (status.toLowerCase()) {
+      case 'danger':
+        return 'danger';
+      case 'success':
+        return 'success';
+      case 'info':
+        return 'info';
+      case 'warning':
+        return 'warning';
+      default:
+        return 'secondary'; 
+    }
+  }
 
 
 

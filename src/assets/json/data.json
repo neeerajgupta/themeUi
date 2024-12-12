@@ -1,5 +1,5 @@
 {
-    "data":[
+    "data": [
         {
             "id": 1,
             "location": 468031,
@@ -7,8 +7,12 @@
             "start_country": "France",
             "end_city": "Catania",
             "end_country": "Italy",
-            "warnings": 1,
-            "progress": 49
+            "vehicles": {
+                "type": "car",
+                "icon": "pi pi-car"
+            },
+            "progress": 100,
+            "status": "success"
         },
         {
             "id": 2,
@@ -17,8 +21,12 @@
             "start_country": "Germany",
             "end_city": "Laspezia",
             "end_country": "Italy",
-            "warnings": 4,
-            "progress": 24
+            "vehicles": {
+                "type": "motorcycle",
+                "icon": "pi pi-discord"
+            },
+            "progress": 50,
+            "status": "warning"
         },
         {
             "id": 3,
@@ -27,8 +35,12 @@
             "start_country": "France",
             "end_city": "Hamm",
             "end_country": "Germany",
-            "warnings": 5,
-            "progress": 7
+            "vehicles": {
+                "type": "truck",
+                "icon": "pi pi-truck"
+            },
+            "progress": 45,
+            "status": "info"
         },
         {
             "id": 4,
@@ -37,8 +49,12 @@
             "start_country": "Germany",
             "end_city": "Gelsenkirchen",
             "end_country": "Germany",
-            "warnings": 1,
-            "progress": 95
+            "vehicles": {
+                "type": "air-conditioned car",
+                "icon": "pi pi-car"
+            },
+            "progress": 100,
+            "status": "success"
         },
         {
             "id": 5,
@@ -47,8 +63,12 @@
             "start_country": "France",
             "end_city": "Berlin",
             "end_country": "Germany",
-            "warnings": 1,
-            "progress": 65
+            "vehicles": {
+                "type": "car",
+                "icon": "pi pi-car"
+            },
+            "progress": 25,
+            "status": "danger"
         },
         {
             "id": 6,
@@ -57,8 +77,12 @@
             "start_country": "France",
             "end_city": "Halle",
             "end_country": "Germany",
-            "warnings": 4,
-            "progress": 55
+            "vehicles": {
+                "type": "motorcycle",
+                "icon": "pi pi-discord"
+            },
+            "progress": 50,
+            "status": "warning"
         },
         {
             "id": 7,
@@ -67,8 +91,12 @@
             "start_country": "France",
             "end_city": "Bochum",
             "end_country": "Germany",
-            "warnings": 2,
-            "progress": 74
+            "vehicles": {
+                "type": "truck",
+                "icon": "pi pi-truck"
+            },
+            "progress": 74,
+            "status": "info"
         },
         {
             "id": 8,
@@ -77,8 +105,12 @@
             "start_country": "USA",
             "end_city": "Lübeck",
             "end_country": "Germany",
-            "warnings": 1,
-            "progress": 100
+            "vehicles": {
+                "type": "air-conditioned car",
+                "icon": "pi pi-car"
+            },
+            "progress": 100,
+            "status": "success"
         },
         {
             "id": 9,
@@ -87,8 +119,12 @@
             "start_country": "France",
             "end_city": "Roma",
             "end_country": "Italy",
-            "warnings": 5,
-            "progress": 82
+            "vehicles": {
+                "type": "motorcycle",
+                "icon": "pi pi-discord"
+            },
+            "progress": 50,
+            "status": "warning"
         },
         {
             "id": 10,
@@ -97,8 +133,12 @@
             "start_country": "USA",
             "end_city": "Mülheim an der Ruhr",
             "end_country": "Germany",
-            "warnings": 5,
-            "progress": 49
+            "vehicles": {
+                "type": "truck",
+                "icon": "pi pi-truck"
+            },
+            "progress": 25,
+            "status": "danger"
         },
         {
             "id": 11,
@@ -107,8 +147,12 @@
             "start_country": "USA",
             "end_city": "Wuppertal",
             "end_country": "Germany",
-            "warnings": 3,
-            "progress": 66
+            "vehicles": {
+                "type": "air-conditioned car",
+                "icon": "pi pi-car"
+            },
+            "progress": 66,
+            "status": "info"
         },
         {
             "id": 12,
@@ -117,8 +161,12 @@
             "start_country": "USA",
             "end_city": "Magdeburg",
             "end_country": "Germany",
-            "warnings": 3,
-            "progress": 7
+            "vehicles": {
+                "type": "car",
+                "icon": "pi pi-car"
+            },
+            "progress": 100,
+            "status": "success"
         },
         {
             "id": 13,
@@ -127,8 +175,12 @@
             "start_country": "USA",
             "end_city": "Wiesbaden",
             "end_country": "Germany",
-            "warnings": 2,
-            "progress": 27
+            "vehicles": {
+                "type": "motorcycle",
+                "icon": "pi pi-discord"
+            },
+            "progress": 50,
+            "status": "warning"
         },
         {
             "id": 14,
@@ -137,8 +189,12 @@
             "start_country": "USA",
             "end_city": "Dresden",
             "end_country": "Germany",
-            "warnings": 3,
-            "progress": 90
+            "vehicles": {
+                "type": "air-conditioned car",
+                "icon": "pi pi-car"
+            },
+            "progress": 90,
+            "status": "info"
         },
         {
             "id": 15,
@@ -147,8 +203,12 @@
             "start_country": "USA",
             "end_city": "Kiel",
             "end_country": "Germany",
-            "warnings": 1,
-            "progress": 81
+            "vehicles": {
+                "type": "car",
+                "icon": "pi pi-car"
+            },
+            "progress": 25,
+            "status": "danger"
         },
         {
             "id": 16,
@@ -157,8 +217,12 @@
             "start_country": "USA",
             "end_city": "Berlin",
             "end_country": "Germany",
-            "warnings": 2,
-            "progress": 21
+            "vehicles": {
+                "type": "air-conditioned car",
+                "icon": "pi pi-car"
+            },
+            "progress": 100,
+            "status": "success"
         },
         {
             "id": 17,
@@ -167,8 +231,12 @@
             "start_country": "France",
             "end_city": "München",
             "end_country": "Germany",
-            "warnings": 1,
-            "progress": 26
+            "vehicles": {
+                "type": "motorcycle",
+                "icon": "pi pi-discord"
+            },
+            "progress": 50,
+            "status": "warning"
         },
         {
             "id": 18,
@@ -177,8 +245,12 @@
             "start_country": "USA",
             "end_city": "Salerno",
             "end_country": "Italy",
-            "warnings": 3,
-            "progress": 80
+            "vehicles": {
+                "type": "air-conditioned car",
+                "icon": "pi pi-car"
+            },
+            "progress": 80,
+            "status": "info"
         },
         {
             "id": 19,
@@ -187,8 +259,12 @@
             "start_country": "Germany",
             "end_city": "Ath",
             "end_country": "Belgium",
-            "warnings": 4,
-            "progress": 50
+            "vehicles": {
+                "type": "truck",
+                "icon": "pi pi-truck"
+            },
+            "progress": 25,
+            "status": "danger"
         },
         {
             "id": 20,
@@ -197,8 +273,12 @@
             "start_country": "USA",
             "end_city": "Neuss",
             "end_country": "Germany",
-            "warnings": 5,
-            "progress": 44
+            "vehicles": {
+                "type": "car",
+                "icon": "pi pi-car"
+            },
+            "progress": 100,
+            "status": "success"
         },
         {
             "id": 21,
@@ -207,8 +287,12 @@
             "start_country": "France",
             "end_city": "Messina",
             "end_country": "Italy",
-            "warnings": 3,
-            "progress": 55
+            "vehicles": {
+                "type": "motorcycle",
+                "icon": "pi pi-discord"
+            },
+            "progress": 50,
+            "status": "warning"
         },
         {
             "id": 22,
@@ -217,8 +301,12 @@
             "start_country": "France",
             "end_city": "Napoli",
             "end_country": "Italy",
-            "warnings": 1,
-            "progress": 48
+            "vehicles": {
+                "type": "air-conditioned car",
+                "icon": "pi pi-car"
+            },
+            "progress": 48,
+            "status": "info"
         },
         {
             "id": 23,
@@ -227,8 +315,12 @@
             "start_country": "Germany",
             "end_city": "Tournai",
             "end_country": "Belgium",
-            "warnings": 4,
-            "progress": 73
+            "vehicles": {
+                "type": "truck",
+                "icon": "pi pi-truck"
+            },
+            "progress": 25,
+            "status": "danger"
         },
         {
             "id": 24,
@@ -237,8 +329,12 @@
             "start_country": "France",
             "end_city": "Torino",
             "end_country": "Italy",
-            "warnings": 2,
-            "progress": 30
+            "vehicles": {
+                "type": "car",
+                "icon": "pi pi-car"
+            },
+            "progress": 100,
+            "status": "success"
         },
         {
             "id": 25,
@@ -247,8 +343,12 @@
             "start_country": "France",
             "end_city": "Dresden",
             "end_country": "Germany",
-            "warnings": 1,
-            "progress": 60
+            "vehicles": {
+                "type": "air-conditioned car",
+                "icon": "pi pi-car"
+            },
+            "progress": 60,
+            "status": "info"
         }
     ]
 }
