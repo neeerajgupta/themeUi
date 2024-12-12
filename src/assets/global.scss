@@ -42,6 +42,30 @@
                 width: 0px;
                 transition: width 1s;
             }
+
+
+            .p-panelmenu{
+                .p-panelmenu-panel{
+                    .p-panelmenu-header{
+                        .p-panelmenu-header-content{
+                            .p-panelmenu-header-action{
+                                .p-menuitem-text{
+                                   display: none;
+                                }
+                                .p-icon-wrapper{
+                                    display: none;
+                                }
+        
+                            }
+        
+                        }
+                    }
+                    
+                    .p-panelmenu-content {
+                        display: none;
+                    }
+                }
+            }
         }
 
 
@@ -52,7 +76,193 @@
             align-items: center;
         }
 
-        .sidepanelmenu {}
+        .p-panelmenu{
+            border: none;
+            border-radius:0px;
+            background: transparent;
+            box-shadow: none;
+    
+            .p-panelmenu-panel{
+                &:hover{
+                    background: #ebf3fe;
+                    .p-panelmenu-header  .p-panelmenu-header-content .p-panelmenu-header-action{
+                        .p-icon-wrapper{
+                            .p-icon.p-submenu-icon{
+                                color: #2e599e;
+                            }
+                        }
+                        .p-menuitem-icon {
+                            color: #2e599e;
+    
+                        }
+                        .p-menuitem-text{
+                            color: #2e599e;
+                        }
+                    }
+                }
+    
+                .p-panelmenu-header{
+                    .p-panelmenu-header-content{
+                        border: none;
+                        background: transparent;
+                        width: auto;
+                        max-width: max-content;
+                        padding: 10px 24px;
+                        
+                        .p-panelmenu-header-action{
+                            padding: 0px;
+                            .p-menuitem-icon {
+                                color: #0c0c0c;
+    
+                            }
+                            .p-menuitem-text{
+                                color: #0c0c0c;
+                            }
+                            .p-icon-wrapper{
+                                position: unset;
+                                transform: translate(198px);
+                                transition: transform 1s;
+                                background: transparent;
+                                border: none;
+    
+                                .p-icon.p-submenu-icon{
+                                    color:#0c0c0c;
+    
+                                   
+                                        position: absolute;
+                                        top: -8px;
+                                }
+                            }
+    
+    
+                            &:hover{
+                                .p-menuitem-icon {
+                                    color: #2e599e;
+        
+                                }
+                                .p-menuitem-text{
+                                    color: #2e599e;
+                                }
+        
+                            } 
+                        }
+                        &:hover{
+                            background: #ebf3fe;
+                            .p-menuitem-icon {
+                                color: #2e599e;
+    
+                            }
+                            .p-menuitem-text{
+                                color: #2e599e;
+                            }
+    
+                        } 
+    
+                    }
+                    &.p-highlight{
+                        background: #ebf3fe;
+                        border-left: 2px solid #2e599e;
+                        color: #2e599e;
+                        .p-panelmenu-header-content{
+                            padding-left: 42px;
+                            .p-panelmenu-header-action{
+                                // padding: 0px 24px;
+                                .p-menuitem-icon {
+                                    color: #2e599e;
+                                    margin-left:-20px;
+                                }
+                                .p-menuitem-text{
+                                    color: #2e599e;
+                                }
+                                .p-icon-wrapper{
+                                    .p-icon.p-submenu-icon{
+                                        color: #2e599e;
+                                        margin-left:-22px;
+                                    }
+                                }
+                            }
+    
+                        }
+                    }
+    
+                    
+                }
+    
+                // toggleable-content
+            .p-toggleable-content{
+                .p-panelmenu-content{
+                    background: #ffffff;
+                    border: none;
+                    .p-submenu-list.p-panelmenu-root-list{
+    
+                        .p-menuitem{
+                            .p-menuitem-content{
+                                color:#0c0c0c;
+                                transition: background-color 0.2s, box-shadow 0.2s;
+                                border-radius: 0;
+                                .p-menuitem-link{
+                                    color:#0c0c0c;
+                                    padding :8px 24px;
+                                    font-size: 14px;
+                                    line-height: 22px;
+                                    font-weight: 400;
+                                    user-select: none;
+                                    .p-icon-wrapper{
+                                        .p-icon.p-submenu-icon{
+                                            color:#0c0c0c;
+                                        }
+                                    }
+                                   
+    
+                                    .p-menuitem-icon {
+                                        color:#0c0c0c;
+                                    }
+                                    .p-menuitem-text{
+                                        color:#0c0c0c;
+                                        font-size: 14px;
+                                        line-height: 22px;
+                                        font-weight: 400;
+                                    }
+                                }
+                            }
+    
+                        }
+    
+                    }
+    
+                     .p-menuitem:not(.p-highlight):not(.p-disabled) > .p-menuitem-content:hover{
+                        background: #ebf3fe;
+                        color:#2e599e;
+                        transition: background-color 0.2s, box-shadow 0.2s;
+                        border-radius: 0;
+                        .p-menuitem-link{
+                            color:#2e599e;
+                            padding :8px 24px;
+                            user-select: none;
+    
+                            .p-icon-wrapper{
+                                .p-icon.p-submenu-icon{
+                                    color:#2e599e;
+                                    // margin-left: 4px;
+                                }
+                            }
+    
+                            .p-menuitem-icon {
+                                color:#636161
+                                ;
+                            }
+                            .p-menuitem-text{
+                                color:#2e599e;
+                            }
+                        }
+    
+                     }
+                    
+                }
+            }
+        
+            }
+        }
     }
 
 }

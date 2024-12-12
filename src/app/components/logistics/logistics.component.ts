@@ -17,6 +17,8 @@ import { ButtonModule } from 'primeng/button';
 import { AllServicesService } from '../../services/all-services.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 @Component({
   selector: 'app-logistics',
   standalone: true,
@@ -29,21 +31,21 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     InputIconModule,
     IconFieldModule,
     TableModule,
-    InputTextModule,ProgressBarModule,
+    InputTextModule, ProgressBarModule,
     HttpClientModule,
-  
-  
+
   ],
   templateUrl: './logistics.component.html',
   styleUrl: './logistics.component.scss',
-  providers:[AllServicesService,ProgressBar,Table,BrowserAnimationsModule]
+  providers: [AllServicesService, ProgressBar, Table],
+
 })
 
 
 export class LogisticsComponent implements OnInit {
-  items:any
-  customers:any
-  customer:any
+  items: any
+  customers: any
+  customer: any
 
 
 
@@ -52,38 +54,39 @@ export class LogisticsComponent implements OnInit {
 
 
 
-constructor(private service:AllServicesService){}
+
+  constructor(private service: AllServicesService) { }
 
   ngOnInit(): void {
     this.customerData()
-   
-    this.items=[{
+
+    this.items = [{
       label: '42',
       icon: 'pi pi-file',
-      value:'On route vehicles',
+      value: 'On route vehicles',
       rate: 17.96,
-      latestDate:'last week'
+      latestDate: 'last week'
     },
     {
       label: '42',
       icon: 'pi pi-file',
-      value:'On route vehicles',
+      value: 'On route vehicles',
       rate: 100,
-      latestDate:'last week'
-    },{
+      latestDate: 'last week'
+    }, {
       label: '42',
       icon: 'pi pi-file',
-      value:'On route vehicles',
+      value: 'On route vehicles',
       rate: 49.96,
-      latestDate:'last week'
-    },{
+      latestDate: 'last week'
+    }, {
       label: '42',
       icon: 'pi pi-file',
-      value:'On route vehicles',
+      value: 'On route vehicles',
       rate: 60.96,
-      latestDate:'last week'
+      latestDate: 'last week'
     }
-  ]
+    ]
   }
 
   getClass(rate: number): string {
@@ -97,27 +100,27 @@ constructor(private service:AllServicesService){}
       return 'full';
     }
   }
-  
+
   customerData() {
     this.service.getTableData().subscribe(resp => {
-      this.customers =  resp; 
+      this.customers = resp;
 
       if (this.customers.data && Array.isArray(this.customers.data)) {
         this.customers.data.forEach((customer: { end_city: any; start_city: any; warnings: any; progress: any; }) => {
-          this.customer=customer;
+          this.customer = customer;
           // console.log("customer",this.customer);
           // console.log("customer",this.customer.id)
-           
+
         });
-    } else {
+      } else {
         console.log("No customer data found or data is not an array.");
-    }
-      
+      }
+
     }, error => {
-      console.error('Error fetching data:', error); 
+      console.error('Error fetching data:', error);
     });
   }
 
-    
- 
+
+
 }
