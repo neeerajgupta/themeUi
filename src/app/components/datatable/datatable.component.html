@@ -1,9 +1,24 @@
 
 
-<div >
-    <h2>Customer Details</h2>
-    <p><strong>ID:</strong>{{rowData.id}} </p>
-    <p><strong>Name:</strong> </p>
-    <p><strong>Email:</strong></p>
-    <!-- Add more fields as needed -->
-  </div>
+
+
+  <p-card>
+    <p-accordion expandIcon="pi pi-angle-right" collapseIcon="pi pi-chevron-down">
+      <p-accordionTab header="Customer Details I" [selected]="true" class="p-mb-2" >
+        <div  >
+          <p><strong>ID:</strong>{{rowData.id}} </p>
+          <p><strong>Name:</strong> {{rowData.id}}</p>
+          <p><strong>Email:</strong> {{rowData.id}}</p>
+        </div>
+      </p-accordionTab>
+      <p-accordionTab header="Godfather II" class="p-mb-2">
+          Francis Ford Coppola's legendary continuation and sequel to his landmark 1972 film,
+          
+          customary cut of the tyro's business. With Fanucci gone, Vito's communal stature grows.
+      </p-accordionTab>
+      <p-accordionTab header="Godfather III">
+          After a break of more than 15 years, director Francis Ford Coppola and writer Mario Puzo
+          
+      </p-accordionTab>
+  </p-accordion>
+  </p-card>

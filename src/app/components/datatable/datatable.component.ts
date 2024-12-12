@@ -7,10 +7,12 @@ import { TagModule } from 'primeng/tag';
 import { ProgressBar, ProgressBarModule } from 'primeng/progressbar';
 import { Avatar, AvatarModule } from 'primeng/avatar';
 import { ActivatedRoute } from '@angular/router';
+import { CardModule } from 'primeng/card';
+import { AccordionModule } from 'primeng/accordion';
 @Component({
   selector: 'app-datatable',
   standalone: true,
-  imports: [ HttpClientModule, AvatarModule],
+  imports: [ HttpClientModule, AvatarModule,CardModule,AccordionModule],
   templateUrl: './datatable.component.html',
   styleUrls: ['./datatable.component.scss'],
   providers: [AllServicesService]
