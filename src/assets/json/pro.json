@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "key": "packages_in_transit",
+      "count": 150,
+      "icon": "pi pi-inbox",
+      "status": 25.8
+    },
+    {
+      "key": "packages_out_for_delivery",
+      "count": 75,
+      "icon": "pi pi-truck",
+      "status": 4.3
+    },
+    {
+      "key": "total_packages",
+      "count": 225,
+      "icon": "pi pi-box",
+      "status": 25.8
+    },
+    {
+      "key": "delivery_success_rate",
+      "count": 92,
+      "icon": "pi pi-check-circle",
+      "status": 25.8
+    },
+    {
+      "key": "average_delivery_time",
+      "count": 3,
+      "icon": "pi pi-clock",
+      "status": 4.3
+    },
+    {
+      "key": "customer_satisfaction",
+      "count": 85,
+      "icon": "pi pi-face-smile",
+      "status": 25.8
+    }
+  ]
+}

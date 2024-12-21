@@ -48,12 +48,27 @@
                 <img src="../../../assets/images/logo1.png" alt="" height="24px" width="24px">
             </div>
         </ng-template>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae
-            numquam deserunt
-            quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
-            quas!
-        </p>
+
+        <p-meterGroup [value]="value"  labelPosition="start" styleClass="meaterGroup"/>
+        <p-table [value]="value" [tableStyle]="{ 'min-width': '50rem' }">
+            <ng-template pTemplate="header">
+                <!-- <tr>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                </tr> -->
+            </ng-template>
+            <ng-template pTemplate="body" let-product>
+                <tr>
+                    <td ><div>
+                        <i [ngClass]="product.icon" class="p-mr-2"></i><span  class="tdvlaue">{{ product.label }}</span>
+                    </div> </td>
+                    <td>{{ product.time }}</td>
+                    <td><span  class="tdvlaue">{{ product.value }}.00%</span></td>
+                </tr>
+            </ng-template>
+        </p-table>
         <ng-template pTemplate="footer">
             <div class="flex gap-4 mt-1">
 
@@ -63,28 +78,146 @@
 </div>
 
 
-<div class="p-grid p-d-flex ">
+<div class="p-grid p-d-flex p-mb-3">
     <div class="p-col-12 p-sm-12 p-md-12 p-lg-6 p-xl-6  p-pr-2 p-pt-0 p-pl-0 p-pb-0 p-mb-3 ">
-        <p-card>
-            <div class="p-d-flex p-ai-center">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, similique consectetur? Est voluptates
-                corporis doloremque dolorem maiores corrupti quas dolores accusamus. Eaque totam repellendus nostrum
-                neque. Nesciunt perferendis laudantium ea!
+        <p-card >
+
+            <ng-template pTemplate="header">
+                <div class="p-d-flex p-jc-between p-pt-4 p-pl-3 p-pr-3">
+                   <div>
+                        <h3 class="p-m-0"> Vehicles Overview on Graph</h3>
+                        <label class="label">Total number of deliveries 23.8k</label>
+                   </div>
+                </div>
+            </ng-template>
+
+
+            <div class="">
+                <p-chart type="line" [data]="chartdata" [options]="options" />
             </div>
+
+            <ng-template pTemplate="footer">
+                <div class="p-mt-5">
+                    <div class="p-pt-5">
+                  
+                    </div>
+                </div>
+            </ng-template>
 
         </p-card>
     </div>
     <div class="p-col-12 p-sm-12 p-md-12 p-lg-6 p-xl-6 p-p-0 ">
         <p-card>
-            <div class="p-d-flex p-ai-center">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, similique consectetur? Est voluptates
-                corporis doloremque dolorem maiores corrupti quas dolores accusamus. Eaque totam repellendus nostrum
-                neque. Nesciunt perferendis laudantium ea!
-            </div>
+            <ng-template pTemplate="header">
+                <div class="p-d-flex p-jc-between p-pt-4 p-pl-3 p-pr-3">
+                   <div>
+                        <h3 class="p-m-0"> Vehicles Delivery Performance</h3>
+                        <label class="label">12% increase in this month</label>
+                   </div>
+                </div>
+            </ng-template>
 
+            @for (item of delivery; track item ; let idx = $index){
+                <div class="p-d-flex p-jc-between">
+                    <div class="p-d-flex p-flex-wrap p-mb-3">
+                        <p-avatar [icon]="item.icon" shape="square" class="p-mr-2" [ngClass]="getcolor(idx)"></p-avatar>
+
+                       <div class="p-flex-1 p-flex p-flex-column p-gap-2">
+                        <h6 class="span p-m-0">{{item.key}}</h6>
+
+                        @if(item.status <= 10){
+                            <label ngClass="pi pi-angle-down"  style="color: red;"></label>
+                            <span class="label">{{item.status }}%</span>
+                        }@else{
+                            <label ngClass="pi pi-angle-up"  style="color: green;"></label>
+                            <span class="label">{{item.status }}%</span>
+
+                            
+                        }
+                       
+                       </div>
+                        
+                    </div>
+
+                    <label for="" class="label">{{item.count}}K</label>
+                    
+                </div>
+
+            }
+              
+              
+                  
+            
         </p-card>
     </div>
 </div>
+
+
+<div class="p-grid p-d-flex p-mb-3">
+    <div class="p-col-12 p-sm-12 p-md-12 p-lg-6 p-xl-6  p-pr-2 p-pt-0 p-pl-0 p-pb-0 p-mb-3 ">
+        <p-card >
+
+            <ng-template pTemplate="header">
+                <div class="p-d-flex p-jc-between p-pt-4 p-pl-3 p-pr-3">
+                   <div>
+                        <h3 class="p-m-0"> Reasons for delivery exceptions</h3>
+                   </div>
+                </div>
+            </ng-template>
+
+
+            <div class="">
+                <p-chart type="doughnut" [data]="doughnut" [options]="options" />
+            </div>
+
+            <ng-template pTemplate="footer">
+                <div class="p-mt-5">
+                    <div class="p-pt-5">
+                  
+                    </div>
+                </div>
+            </ng-template>
+
+        </p-card>
+    </div>
+    <div class="p-col-12 p-sm-12 p-md-12 p-lg-6 p-xl-6 p-p-0 ">
+        <p-card>
+            <ng-template pTemplate="header">
+                <div class="p-d-flex p-jc-between p-pt-4 p-pl-3 p-pr-3">
+                   <div>
+                        <h3 class="p-m-0"> Orders by Countries</h3>
+                        <label class="label">12% deliveries in progress</label>
+                   </div>
+                </div>
+            </ng-template>
+
+            <p-tabView>
+                <p-tabPanel header="Header I">
+                    <p>
+                        Lorem ipsum dolor sit amet...
+                    </p>
+                </p-tabPanel>
+                <p-tabPanel header="Header II">
+                    <p>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...
+                    </p>
+                </p-tabPanel>
+                <p-tabPanel header="Header III">
+                    <p>
+                        At vero eos et accusamus et iusto odio dignissimos...
+                    </p>
+                </p-tabPanel>
+            </p-tabView>
+
+            
+              
+              
+                  
+            
+        </p-card>
+    </div>
+</div>
+
 
 
 
@@ -108,7 +241,7 @@
                 <th>End_city</th>
                 <th>Status</th>
                 <th>Progress</th>
-                <th>Country</th>
+                <th>State</th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-customer>
@@ -121,7 +254,7 @@
                 <td>{{customer.end_city}}</td>
                 <td> <p-tag [value]="customer.status" [severity]="getSeverity(customer.status)" /> </td>
                 <td> <p-progressBar [value]="customer.progress" [showValue]="true"></p-progressBar></td>
-                <td>{{customer.start_country}}</td>
+                <td>{{customer.state}}</td>
             </tr>
         </ng-template>
     </p-table>

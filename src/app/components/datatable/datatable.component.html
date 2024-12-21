@@ -7,14 +7,16 @@
       <p-accordionTab header="Customer Details I" [selected]="true" class="p-mb-2" >
         <div  >
           <p><strong>ID:</strong>{{rowData.id}} </p>
-          <p><strong>Name:</strong> {{rowData.id}}</p>
-          <p><strong>Email:</strong> {{rowData.id}}</p>
+          <p><strong>Name:</strong> {{rowData.name.first}} {{rowData.name.last}}</p>
+          <p><strong>Email:</strong> {{rowData.name.email}}</p>
         </div>
       </p-accordionTab>
-      <p-accordionTab header="Godfather II" class="p-mb-2">
-          Francis Ford Coppola's legendary continuation and sequel to his landmark 1972 film,
-          
-          customary cut of the tyro's business. With Fanucci gone, Vito's communal stature grows.
+      <p-accordionTab [header]=rowData.name.first class="p-mb-2">
+        <div  >
+          <p><strong>ID:</strong>{{rowData.id}} </p>
+          <p><strong>Name:</strong> {{rowData.name.first}} {{rowData.name.last}}</p>
+          <p><strong>Email:</strong> {{rowData.name.email}}</p>
+        </div>
       </p-accordionTab>
       <p-accordionTab header="Godfather III">
           After a break of more than 15 years, director Francis Ford Coppola and writer Mario Puzo

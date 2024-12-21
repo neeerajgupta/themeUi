@@ -2,6 +2,58 @@
     margin: 0px;
 }
 
+body {
+    font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.p-component {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+
+:root {
+    --blue-500: #9188f4;
+    --org-500: #f8e535;
+    --green-500: #066303;
+}
+
+.label {
+    font-size: 14px;
+    margin-left: 8px;
+    color: #acaab1;
+
+}
+.span{
+    font-size: 14px;
+    margin-left: 8px;
+    color: #2d2c2e;
+
+}
+.color1>div {
+    background-color: #e9ac9e; 
+    color: rgb(247, 0, 0); 
+}
+
+.color2>div {
+    background-color: #8bfda075; 
+    color: rgb(15, 90, 0); 
+}
+
+.color3>div {
+    background-color: #899df7c5; 
+    color: rgb(0, 26, 255); 
+}
+
+.color4>div {
+    background-color: rgb(133 228 248 / 43%);
+    color: rgb(17 120 153);
+}
+.color5>div {
+    background-color: #8781c2d0; 
+    color: rgb(1, 23, 119); 
+}
+
+
 .leftlayout {
     box-shadow: 9px 3px 5px #efe4e4;
     z-index: 98;
@@ -20,7 +72,7 @@
 
 
         &.expend {
-            width: 16.25rem;
+            width: 14.50rem;
             transition: width 1s;
 
             .imglogo1 {
@@ -98,22 +150,25 @@
 
             .p-panelmenu-panel {
                 &:hover {
-                    background: #ebf3fe;
+                    // background: #ebf3fe;
+                    background: linear-gradient(270deg, rgba(115, 103, 240, 0.7) 0%, #7367f0 100%);
+                    box-shadow: 0px 2px 6px 0px rgba(115, 103, 240, .3);
+                    border-radius: 20px;
 
                     .p-panelmenu-header .p-panelmenu-header-content .p-panelmenu-header-action {
                         .p-icon-wrapper {
                             .p-icon.p-submenu-icon {
-                                color: #2e599e;
+                                color: #ffffff;
                             }
                         }
 
                         .p-menuitem-icon {
-                            color: #2e599e;
+                            color: #fafcff;
 
                         }
 
                         .p-menuitem-text {
-                            color: #2e599e;
+                            color: #fdfeff;
                         }
                     }
                 }
@@ -148,37 +203,37 @@
 
                                 .p-icon.p-submenu-icon {
                                     color: #0c0c0c;
-
-
                                     position: absolute;
                                     top: -8px;
+                                    left: -10px;
                                 }
                             }
 
 
                             &:hover {
                                 .p-menuitem-icon {
-                                    color: #2e599e;
+                                    color: #fcfdff;
 
                                 }
 
                                 .p-menuitem-text {
-                                    color: #2e599e;
+                                    color: #ffffff;
                                 }
 
                             }
                         }
 
                         &:hover {
-                            background: #ebf3fe;
+                            background: linear-gradient(270deg, rgba(114, 103, 240, 0.055) 0%, #7267f023 100%);
+                            color: #ffffff;
 
                             .p-menuitem-icon {
-                                color: #2e599e;
+                                color: #ffffff;
 
                             }
 
                             .p-menuitem-text {
-                                color: #2e599e;
+                                color: #ffffff;
                             }
 
                         }
@@ -186,9 +241,12 @@
                     }
 
                     &.p-highlight {
-                        background: #ebf3fe;
+                        // background: #ebf3fe;
+                        background: linear-gradient(270deg, rgba(115, 103, 240, 0.7) 0%, #7367f0 100%);
+                        box-shadow: 0px 2px 6px 0px rgba(115, 103, 240, .3);
                         border-left: 2px solid #2e599e;
-                        color: #2e599e;
+                        color: #ffffff;
+                        border-radius: 20px;
 
                         .p-panelmenu-header-content {
                             padding-left: 42px;
@@ -266,10 +324,12 @@
                         }
 
                         .p-menuitem:not(.p-highlight):not(.p-disabled)>.p-menuitem-content:hover {
-                            background: #ebf3fe;
-                            color: #2e599e;
+                            // background: #ebf3fe;
+                            background: linear-gradient(270deg, rgba(115, 103, 240, 0.7) 0%, #7367f0 100%);
+                            box-shadow: 0px 2px 6px 0px rgba(115, 103, 240, .3);
+                            color: #ffffff;
                             transition: background-color 0.2s, box-shadow 0.2s;
-                            border-radius: 0;
+                            border-radius: 20px;
 
                             .p-menuitem-link {
                                 color: #2e599e;
@@ -278,17 +338,17 @@
 
                                 .p-icon-wrapper {
                                     .p-icon.p-submenu-icon {
-                                        color: #2e599e;
+                                        color: #ffffff;
                                         // margin-left: 4px;
                                     }
                                 }
 
                                 .p-menuitem-icon {
-                                    color: #636161;
+                                    color: #ffffff;
                                 }
 
                                 .p-menuitem-text {
-                                    color: #2e599e;
+                                    color: #ffffff;
                                 }
                             }
 
@@ -329,6 +389,16 @@
         .card {
             .p-card {
                 margin-right: 16px;
+
+                .p-card-header {
+                    label {
+                        font-size: 14px;
+                        margin-left: 8px;
+                        color: #acaab1;
+                    }
+
+                }
+
 
                 .p-card-body {
                     padding: 0px 16px;
@@ -460,29 +530,101 @@
                     img {
                         width: auto;
                     }
+
                 }
+
+                .p-card-body {
+                    .p-card-content {
+                        .meaterGroup {
+                            &.p-metergroup.p-metergroup-horizontal {
+                                .p-metergroup-labels.p-metergroup-labels-horizontal {
+                                    gap: 10%;
+                                    color: #6d6b77;
+                                    font-size: 15px;
+                                }
+
+                                .p-metergroup-meters {
+                                    height: 2rem;
+                                }
+                            }
+
+                        }
+
+                        .p-datatable {
+                            .p-datatable-header {
+                                border-radius: 16px 16px 0px 0px;
+                            }
+
+                            .p-datatable-wrapper {
+
+                                .p-datatable-table {
+
+                                    .p-datatable-tbody {
+                                        tr {
+                                            td {
+                                                >div {
+                                                    display: flex;
+                                                    align-items: center;
+
+                                                    .pi {
+                                                        font-size: 18px;
+                                                    }
+                                                }
+
+                                                .tdvlaue {
+                                                    color: #444050b3;
+                                                    font-size: 14px;
+                                                    font-weight: 500;
+                                                    font-family: revert;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                }
+                            }
+
+
+                        }
+                    }
+                }
+
+                // .p-card-footer {
+                //     padding: 0px;
+                // }
+
+
             }
+
+
+
         }
 
-       
+
+
+
+
 
     }
 }
-.datatable{
+
+.datatable {
     background: #ffffff;
     padding: 0px;
     border-radius: 16px 16px 6px 6px;
     box-shadow: 0px 4px 10px -2px #6b6969;
-    .p-datatable{
-        .p-datatable-header{
+
+    .p-datatable {
+        .p-datatable-header {
             border-radius: 16px 16px 0px 0px;
         }
-        .p-datatable-wrapper{
-           
-            .p-datatable-table{
-                .p-datatable-thead{
-                    tr{
-                        th{
+
+        .p-datatable-wrapper {
+
+            .p-datatable-table {
+                .p-datatable-thead {
+                    tr {
+                        th {
                             text-align: left;
                             padding: 10px;
                             border: 1px solid #a7a8aa;
@@ -494,83 +636,96 @@
                         }
                     }
                 }
-                .p-datatable-tbody{
-                    tr{
-                        td{
+
+                .p-datatable-tbody {
+                    tr {
+                        td {
                             text-align: left;
-                            border: 1px solid #e6e6e8 ;
+                            border: 1px solid #e6e6e8;
                             border-width: 0 0 1px 0;
                             padding: 8px;
                             color: #6d6b77;
-                            strong{
+
+                            strong {
                                 color: #444050;
                                 font-weight: 600;
                                 cursor: pointer;
-                                &:hover{
+
+                                &:hover {
                                     color: #2e599e;
                                 }
                             }
-    
-                            .p-avatar{
-                                .p-avatar-text{
+
+                            .p-avatar {
+                                .p-avatar-text {
                                     line-height: 0px;
                                 }
                             }
-                            .p-tag{
+
+                            .p-tag {
                                 padding: 2px 6px;
+
                                 &.p-tag-success {
                                     background-color: #78f7a7;
                                     color: #207624;
                                 }
+
                                 &.p-tag-warning {
                                     background-color: #edac7f;
                                     color: #b14b05;
                                 }
+
                                 &.p-tag.p-tag-danger {
                                     background-color: #f18a8a;
                                     color: #db0101;
                                 }
                             }
-                            .p-progressbar{
+
+                            .p-progressbar {
                                 border-radius: 12px;
                                 height: 12px;
-                                .p-progressbar-value{
-                                    .p-progressbar-label{
+
+                                .p-progressbar-value {
+                                    .p-progressbar-label {
                                         line-height: 0px;
                                         color: #0c0c0c;
                                         font-size: 10px;
                                     }
                                 }
                             }
-                            
+
                         }
                     }
                 }
-    
+
             }
         }
-        .p-paginator-bottom.p-paginator{
+
+        .p-paginator-bottom.p-paginator {
             border-radius: 0px 0px 10px 10px;
-            .p-paginator-element.p-link{
+
+            .p-paginator-element.p-link {
                 min-width: 2rem;
                 height: 2rem;
             }
-            .p-paginator-pages{
-               .p-paginator-page.p-link{
-                min-width: 2rem;
-                height: 2rem;
-               }
+
+            .p-paginator-pages {
+                .p-paginator-page.p-link {
+                    min-width: 2rem;
+                    height: 2rem;
+                }
             }
 
         }
-        .p-paginator-rpp-options.p-dropdown{
-            height:2rem;
+
+        .p-paginator-rpp-options.p-dropdown {
+            height: 2rem;
+
             .p-dropdown-label.p-inputtext {
                 padding: 6px 8px;
             }
 
         }
-    
+
     }
 }
-

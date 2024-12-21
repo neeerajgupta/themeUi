@@ -20,4 +20,16 @@ export class AllServicesService {
 
   }
 
+  getChartData() {
+    return this.http.get<any>('../../../assets/json/chartvalue.json');
+      
+
+  }
+
+  getdeliveryData() {
+    return this.http.get<any>('../../../assets/json/pro.json');
+     
+
+  }
+
 }

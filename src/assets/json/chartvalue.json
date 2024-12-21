@@ -1,0 +1,35 @@
+{
+    "labels": ["January", "February", "March", "April", "May", "June", "July","August","September","October"],
+    "data": [
+      {
+        "type": "line",
+        "label": "Delivery",
+        "borderColor": "--blue-500",
+        "borderWidth": 4,
+        "fill": false,
+        "tension": 0.4,
+        "data": [50, 25, 55, 48, 56, 76, 42,80,75,87]
+      },
+      {
+        "type": "bar",
+        "label": "Shipment ",
+        "backgroundColor": "--org-500",
+        "data": [21, 84, 24, 75, 37, 65, 34,21, 84, 24],
+        "borderColor": "--blue-500",
+        "borderWidth":2,
+        "borderRadius": 10 
+      },
+      {
+        "type": "bar",
+        "label": "Upload",
+        "backgroundColor": "--green-500",
+        "data": [40,45,50,55,60,57,52,49,42],
+        "borderColor": "--blue-500",
+        "borderWidth":2,
+        "borderRadius": 10 
+      }
+     
+    ]
+
+  }
+  
