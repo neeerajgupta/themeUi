@@ -7,43 +7,49 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { trigger, transition, style, animate } from '@angular/animations';
 import { Router } from '@angular/router';
- 
+
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [FormsModule, PanelMenuModule,CommonModule],
+  imports: [FormsModule, PanelMenuModule, CommonModule],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss',
 
-  
+
 })
 export class SidebarComponent implements OnInit {
   items: any;
 
-  constructor(private route:Router){}
+  constructor(private route: Router) { }
   ngOnInit() {
     this.items = [
       {
         label: 'Home',
         icon: 'pi pi-home',
-        command: () => {
-          this.route.navigate(['/']);
-        }
+        // command: () => {
+        //   this.route.navigate(['/']);
+        // },
+        routerLink: '/',
+        routerLinkActiveOptions: { exact: true }
       },
       {
         label: 'Dashbord',
         icon: 'pi pi-star',
-        command: () => {
-          this.route.navigate(['/logistic']);
-        }
+        // command: () => {
+        //   this.route.navigate(['/logistic']);
+        // },
+        routerLink: '/logistic',
+        routerLinkActiveOptions: { exact: true }
       },
       {
         label: 'Scroll',
-        icon: 'pi pi-star',
-        command: () => {
-          this.route.navigate(['/scrollPage']);
-        }
+        icon: 'pi pi-gauge',
+        // command: () => {
+        //   this.route.navigate(['/scrollPage']);
+        // },
+        routerLink: '/scrollPage',
+        routerLinkActiveOptions: { exact: true }
       },
       {
         label: 'Projects',
@@ -80,9 +86,8 @@ export class SidebarComponent implements OnInit {
       {
         label: 'Vehicles Data',
         icon: 'pi pi-sitemap',
-        command: () => {
-          this.route.navigate(['/tabledata']);
-        }
+        routerLink: '/tabledata',
+        routerLinkActiveOptions: { exact: true }
       }
     ]
   }

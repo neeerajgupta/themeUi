@@ -19,23 +19,23 @@ export class TopbarComponent implements OnInit {
       {
         label: 'Home',
         icon: 'pi pi-home',
-        command: () => {
-          this.router.navigate(['/']);
-        }
+        routerLink: '/',
+        routerLinkActiveOptions: { exact: true }
       },
       {
         label: 'Dashbord',
         icon: 'pi pi-star',
-        command: () => {
-          this.router.navigate(['/logistic']);
-        }
+        // command: () => {
+        //   this.router.navigate(['/logistic']);
+        // },
+        routerLink: '/logistic',
+        routerLinkActiveOptions: { exact: true }
       },
       {
         label: 'Scroll',
-        icon: 'pi pi-star',
-        command: () => {
-          this.router.navigate(['/scrollPage']);
-        }
+        icon: 'pi pi-gauge',
+        routerLink: '/scrollPage',
+        routerLinkActiveOptions: { exact: true }
       },
       {
         label: 'Projects',

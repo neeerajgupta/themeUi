@@ -20,7 +20,7 @@ export class ScrollpageZoomComponent {
    
     } else {
          // Scroll up
-         this.scale = Math.min(this.scale + 0.1, 3); 
+         this.scale = Math.min(this.scale + 0.1, 20); 
      
     }
     event.preventDefault(); 
