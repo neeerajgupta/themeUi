@@ -39,6 +39,13 @@ export class SidebarComponent implements OnInit {
         }
       },
       {
+        label: 'Scroll',
+        icon: 'pi pi-star',
+        command: () => {
+          this.route.navigate(['/scrollPage']);
+        }
+      },
+      {
         label: 'Projects',
         icon: 'pi pi-search',
         items: [

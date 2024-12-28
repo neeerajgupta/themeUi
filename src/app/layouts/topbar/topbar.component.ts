@@ -31,6 +31,13 @@ export class TopbarComponent implements OnInit {
         }
       },
       {
+        label: 'Scroll',
+        icon: 'pi pi-star',
+        command: () => {
+          this.router.navigate(['/scrollPage']);
+        }
+      },
+      {
         label: 'Projects',
         icon: 'pi pi-search',
         items: [
