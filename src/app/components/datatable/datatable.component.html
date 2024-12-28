@@ -1,26 +1,41 @@
+<div class="dataTableview">
+
+  <p-breadcrumb 
+    class="max-w-full" 
+    [model]="items" 
+    [home]="home" />
+
+  <h4 class="p-m-1">{{rowData.name.first}} {{rowData.name.last}} Datils</h4>
 
 
 
 
-  <p-card>
-    <p-accordion expandIcon="pi pi-angle-right" collapseIcon="pi pi-chevron-down">
-      <p-accordionTab header="Customer Details I" [selected]="true" class="p-mb-2" >
-        <div  >
-          <p><strong>ID:</strong>{{rowData.id}} </p>
-          <p><strong>Name:</strong> {{rowData.name.first}} {{rowData.name.last}}</p>
-          <p><strong>Email:</strong> {{rowData.name.email}}</p>
-        </div>
-      </p-accordionTab>
-      <p-accordionTab [header]=rowData.name.first class="p-mb-2">
-        <div  >
-          <p><strong>ID:</strong>{{rowData.id}} </p>
-          <p><strong>Name:</strong> {{rowData.name.first}} {{rowData.name.last}}</p>
-          <p><strong>Email:</strong> {{rowData.name.email}}</p>
-        </div>
-      </p-accordionTab>
-      <p-accordionTab header="Godfather III">
-          After a break of more than 15 years, director Francis Ford Coppola and writer Mario Puzo
-          
-      </p-accordionTab>
-  </p-accordion>
-  </p-card>
+  <div class="p-d-flex p-jc-around tabledatabase">
+    <div>
+      <p><strong class="p-mr-3">ID:</strong>{{rowData.id}} </p>
+      <p><strong class="p-mr-3">Name:</strong> {{rowData.name.first}} {{rowData.name.last}}</p>
+      <p><strong class="p-mr-3">Email:</strong> {{rowData.name.email}}</p>
+    </div>
+
+    <div class="p-d-flex ">
+      <p-avatar [icon]="rowData.vehicles.icon" shape="circle" class="color3" />
+      <label class="p-mr-3 p-ml-3 label"> {{rowData.vehicles.type}}</label>
+      <p-badge [value]=rowData.location class="ml-auto mr-2" />
+    </div>
+
+
+
+    <div class="p-d-flex ">
+      <img [src]="rowData.image" height="200px" width="200px" alt="">
+      <!-- <img src="../../../assets/images/neeraj.jpg" alt=""> -->
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+</div>

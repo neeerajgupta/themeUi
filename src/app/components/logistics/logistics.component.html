@@ -247,8 +247,8 @@
         <ng-template pTemplate="body" let-customer>
             <tr>
                 <td>{{customer.id}}</td>
-                <td  ><p-avatar [icon]="customer.vehicles.icon" shape="circle" class="p-mr-2">
-                    </p-avatar><strong  (click)="onRowClick(customer)">{{customer.vehicles.type }}</strong></td>
+                <td  class="color3"><p-avatar [icon]="customer.vehicles.icon" shape="circle" class="p-mr-2">
+                    </p-avatar><strong class="color3" (click)="onRowClick(customer)">{{customer.vehicles.type }}</strong></td>
                 <td>{{customer.location}}</td>
                 <td>{{customer.start_city}}</td>
                 <td>{{customer.end_city}}</td>

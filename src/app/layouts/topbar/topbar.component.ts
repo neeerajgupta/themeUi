@@ -72,9 +72,8 @@ export class TopbarComponent implements OnInit {
       {
         label: 'Vehicles Data',
         icon: 'pi pi-sitemap',
-        command: () => {
-          this.router.navigate(['/tabledata']);
-        }
+        routerLink: '/tabledata',
+        routerLinkActiveOptions: { exact: true }
       }
     ]
   }
